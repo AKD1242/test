@@ -35,3 +35,7 @@ function touchStarted(){
   fireworks.push({x:200,y:401,dx:random(-2,2),speed:speed,height:200-(speed*20)});
   fullscreen(true);
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
