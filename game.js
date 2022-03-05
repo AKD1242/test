@@ -34,5 +34,5 @@ function touchStarted(){
   speed = random(1,5);
   fireworks.push({x:200,y:401,dx:random(-2,2),speed:speed,height:200-(speed*20)});
   let fs = fullscreen();
-  fulscreen(fs);
+  fullscreen(fs);
 }
