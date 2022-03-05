@@ -3,6 +3,7 @@ explosions = [];
 
 function setup() {
   createCanvas(400, 400);
+  fullscreen(True);
   frameRate(60);
 }
 
