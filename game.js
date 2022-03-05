@@ -8,11 +8,6 @@ function setup() {
 
 function draw() {
   background(1);
-  if(touches > 0){
-    speed = random(1,5);
-    fireworks.push({x:200,y:401,dx:random(-2,2),speed:speed,height:200-(speed*20)});
-    return false;
-  }
   for(i in fireworks){
     rect(fireworks[i].x,fireworks[i].y,5,5);
     fireworks[i].x+=fireworks[i].dx;
@@ -34,3 +29,8 @@ function draw() {
     }
   }
 }  
+
+function touchMoved(){
+  speed = random(1,5);
+  fireworks.push({x:200,y:401,dx:random(-2,2),speed:speed,height:200-(speed*20)});
+}
