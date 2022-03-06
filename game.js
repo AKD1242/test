@@ -9,18 +9,21 @@ function setup() {
 
 function draw() {
   background(1);
+  fill(255);
   for(i in fireworks){
     rect(fireworks[i].x,fireworks[i].y,5,5);
     fireworks[i].x+=fireworks[i].dx;
     fireworks[i].y-=fireworks[i].speed;
     if(fireworks[i].y <= fireworks[i].height){
       for(j=0;j<10;j++){
-        explosions.push({x:fireworks[i].x,y:fireworks[i].y,dx:random(-2,2),dy:random(-2,2),size:random(0,50)});
+        color = (random(0,255),random(0,255,random(0,255);
+        explosions.push({x:fireworks[i].x,y:fireworks[i].y,dx:random(-2,2),dy:random(-2,2),size:random(0,50),color:color});
       }
       fireworks.splice(i,1);
     }
   }
   for(i in explosions){
+    fill(explosions[i].color);
     ellipse(explosions[i].x,explosions[i].y,explosions[i].size,explosions[i].size)
     explosions[i].x+=explosions[i].dx;
     explosions[i].y+=explosions[i].dy;
