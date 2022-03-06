@@ -50,5 +50,5 @@ function touchEnded(){
 }
 
 function windowResized(){
-  canvasResized(displayWidth,displayHeight);
+  resizeCanvas(displayWidth,displayHeight);
 }
