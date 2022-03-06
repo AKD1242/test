@@ -2,7 +2,7 @@ fireworks = [];
 explosions = [];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(pageWidth, pageHeight);
   frameRate(60);
 }
 
@@ -28,12 +28,19 @@ function draw() {
       explosions.splice(i,1);
     }
   }
+  if(fire == 1){
+   speed = random(1,5);
+   fireworks.push({x:windowWidth/2,y:windowHeight+1,dx:random(-2,2),speed:speed,height:(windowHeight/2)-(speed*20)});
+   fullscreen(true);
+  }
 }  
 
 function touchStarted(){
-  speed = random(1,5);
-  fireworks.push({x:windowWidth/2,y:windowHeight+1,dx:random(-2,2),speed:speed,height:(windowHeight/2)-(speed*20)});
-  fullscreen(true);
+  fire = 1;
+}
+
+function touchEnded(){
+  fire = 0;
 }
 
 function windowResized() {
