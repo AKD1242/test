@@ -1,5 +1,6 @@
 fireworks = [];
 explosions = [];
+fire = 0;
 
 function setup() {
   createCanvas(pageWidth, pageHeight);
@@ -30,7 +31,7 @@ function draw() {
   }
   if(fire == 1){
    speed = random(1,5);
-   fireworks.push({x:windowWidth/2,y:windowHeight+1,dx:random(-2,2),speed:speed,height:(windowHeight/2)-(speed*20)});
+   fireworks.push({x:windowWidth/2,y:windowHeight+1,dx:random(-2,2),speed:speed,height:(windowHeight/2)-(speed*(windowHeight/5))});
    fullscreen(true);
   }
 }  
