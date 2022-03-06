@@ -43,6 +43,7 @@ function draw() {
 function touchStarted(){
   fire = 1;
   fullscreen(true);
+  windowResized();
 }
 
 function touchEnded(){
