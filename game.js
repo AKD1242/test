@@ -49,8 +49,3 @@ function touchStarted(){
 function touchEnded(){
   fire = 0;
 }
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  background(1);
-}
