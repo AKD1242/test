@@ -3,7 +3,7 @@ explosions = [];
 fire = 0;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(displayWidth, displayHeight);
   frameRate(60);
 }
 
