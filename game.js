@@ -16,7 +16,7 @@ function draw() {
     fireworks[i].y-=fireworks[i].speed;
     if(fireworks[i].y <= fireworks[i].height){
       for(j=0;j<10;j++){
-        color = (random(0,255),random(0,255),random(0,255));
+        color = ("rgb"+(random(0,255)+","+random(0,255)+","+random(0,255))+");
         explosions.push({x:fireworks[i].x,y:fireworks[i].y,dx:random(-2,2),dy:random(-2,2),size:random(0,50),color:color});
       }
       fireworks.splice(i,1);
@@ -48,5 +48,5 @@ function touchEnded(){
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(displayWidth, displayHeight);
 }
