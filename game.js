@@ -25,7 +25,7 @@ function draw() {
     }
   }
   for(i in explosions){
-    fill(explosions[i].color);
+    fill(explosions[i].r,explosions[i].g,explosions[i].b);
     ellipse(explosions[i].x,explosions[i].y,explosions[i].size,explosions[i].size)
     explosions[i].x+=explosions[i].dx;
     explosions[i].y+=explosions[i].dy;
